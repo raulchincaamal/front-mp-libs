@@ -25,6 +25,10 @@
     "typescript-eslint": "^8.46.4",
     "eslint-config-prettier": "10.0.1",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "eslint-plugin-prettier": "5.2.3"
+    "eslint-plugin-prettier": "5.2.3",
+    "husky": "9.1.7",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-svgr": "4.5.0"
   }
 }
