@@ -8,7 +8,8 @@
   "types": "dist/main.d.ts",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/update-svgs.js && node scripts/generate-index.js && node scripts/generate-readme.js",
+    "lint": "eslint . --fix",
+    "prebuild": "node scripts/update-svgs.js && node scripts/generate-index.js && node scripts/generate-readme.js && npm run lint && git add .",
     "build": "tsc -b ./tsconfig.lib.json && vite build"
   },
   "files": [

@@ -13,3 +13,5 @@ for file in $CHANGED_FILES; do
       ;;
   esac
 done
+
+git add .
