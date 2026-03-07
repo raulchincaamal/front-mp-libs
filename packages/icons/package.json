@@ -8,6 +8,7 @@
   "types": "dist/main.d.ts",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/update-svgs.js && node scripts/generate-index.js && node scripts/generate-readme.js",
     "build": "tsc -b ./tsconfig.lib.json && vite build"
   },
   "files": [
