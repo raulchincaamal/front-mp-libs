@@ -78,6 +78,7 @@ function App() {
 | <img src="./lib/classic-regular/headphones.svg" width="24" height="24"> | headphones |
 | <img src="./lib/classic-regular/heart.svg" width="24" height="24"> | heart |
 | <img src="./lib/classic-regular/house.svg" width="24" height="24"> | house |
+| <img src="./lib/classic-regular/image-x-mark.svg" width="24" height="24"> | image-x-mark |
 | <img src="./lib/classic-regular/image.svg" width="24" height="24"> | image |
 | <img src="./lib/classic-regular/inbox.svg" width="24" height="24"> | inbox |
 | <img src="./lib/classic-regular/layer-group.svg" width="24" height="24"> | layer-group |
