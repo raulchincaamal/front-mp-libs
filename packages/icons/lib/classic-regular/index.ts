@@ -1,5 +1,6 @@
 export { default as AlarmClockRegular } from "./alarm-clock.svg"
 export { default as ArrowDownToLineRegular } from "./arrow-down-to-line.svg"
+export { default as ArrowRetryIconRegular } from "./arrow-retry-icon.svg"
 export { default as ArrowRightRegular } from "./arrow-right.svg"
 export { default as ArrowUpFromBracketRegular } from "./arrow-up-from-bracket.svg"
 export { default as ArrowUpRegular } from "./arrow-up.svg"

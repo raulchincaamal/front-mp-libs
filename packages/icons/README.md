@@ -31,6 +31,7 @@ function App() {
 |-------|------------------|
 | <img src="./lib/classic-regular/alarm-clock.svg" width="24" height="24"> | alarm-clock |
 | <img src="./lib/classic-regular/arrow-down-to-line.svg" width="24" height="24"> | arrow-down-to-line |
+| <img src="./lib/classic-regular/arrow-retry-icon.svg" width="24" height="24"> | arrow-retry-icon |
 | <img src="./lib/classic-regular/arrow-right.svg" width="24" height="24"> | arrow-right |
 | <img src="./lib/classic-regular/arrow-up-from-bracket.svg" width="24" height="24"> | arrow-up-from-bracket |
 | <img src="./lib/classic-regular/arrow-up.svg" width="24" height="24"> | arrow-up |

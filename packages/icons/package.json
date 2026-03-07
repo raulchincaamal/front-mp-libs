@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite",
     "lint": "eslint . --fix",
-    "prebuild": "node scripts/update-svgs.js && node scripts/generate-index.js && node scripts/generate-readme.js && npm run lint && git add .",
+    "prebuild": "node scripts/update-svgs.js && node scripts/generate-index.js && node scripts/generate-readme.js",
     "build": "tsc -b ./tsconfig.lib.json && vite build"
   },
   "files": [
