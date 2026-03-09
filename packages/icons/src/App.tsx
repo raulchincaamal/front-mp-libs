@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import { useState } from "react"
 import "./App.css"
 

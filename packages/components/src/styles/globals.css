@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer base {
+  html {
+    font-family: "AvenirNextLTPro", sans-serif, arial;
+  }
+}
+
+/* Tailwind CSS v4 Configuration */
+
+@theme {
+  /* Heights */
+  --height-fill-available: -webkit-fill-available;
+
+  /* Animations */
+  --animate-jump: jump 0.6s ease-in-out infinite alternate;
+  --animate-split-left: splitLeft 0.6s ease-out infinite alternate;
+  --animate-split-right: splitRight 0.6s ease-out infinite alternate;
+  --animate-smart: smart 2s infinite;
+  --animate-fade-out: fadeOut 1s;
+
+  /* Keyframes */
+  --keyframes-jump: "0%, 100% {transform: translateY(0)} 100% {transform: translateY(-40px)}";
+  --keyframes-split-left: "0% {transform: translateX(-100%)} 100% {transform: translateX(100%)}";
+  --keyframes-split-right: "0% {transform: translateX(100%)} 100% {transform: translateX(-100%)}";
+  --keyframes-smart: "0% {transform: scale(0.95) ; box-shadow: 0 0 0 0 rgba(30,64,175,0.9)} 50% {transform: scale(1) ; box-shadow: 0 0 0 8px rgba(30, 64, 175, 0)}100% {transform: scale(0.95) ; box-shadow: 0 0 0 0 rgba(30, 64, 175, 0)}";
+  --keyframes-fade-out: "from {opacity: 1} to {opacity: 0}";
+
+  /* Background Images */
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+
+  /* Primary Colors */
+  --color-primary-blue: #0047ba;
+  --color-primary-yellow: #ffdd00;
+  --color-primary-red: #ff4d4f;
+
+  /* Light Colors */
+  --color-light-blue-30: #4d7ecf;
+  --color-light-blue-60: #99b5e3;
+  --color-light-blue-90: #e6edf8;
+  --color-light-yellow-30: #ffe74d;
+  --color-light-yellow-60: #fff199;
+  --color-light-yellow-90: #fffce6;
+
+  /* Tints */
+  --color-tints-blue-30: #4d7ecf;
+  --color-tints-blue-60: #99b5e3;
+  --color-tints-blue-90: #e6edf8;
+  --color-tints-yellow-30: #ffe74d;
+  --color-tints-yellow-60: #fff199;
+  --color-tints-yellow-90: #fffce6;
+
+  /* Shades */
+  --color-shades-blue-30: #003282;
+  --color-shades-blue-60: #001c4a;
+  --color-shades-blue-90: #000713;
+  --color-shades-yellow-10: #e5c600;
+  --color-shades-yellow-30: #b39b00;
+  --color-shades-yellow-60: #665800;
+  --color-shades-yellow-90: #191600;
+  --color-shades-red-10: #ff0003;
+
+  /* Grays */
+  --color-grays: #4d4d4d;
+  --color-grays-macropay-02: #edf2f7;
+  --color-grays-macropay-05: #a1adc0;
+  --color-grays-macropay-07: #4b5468;
+  --color-grays-macropay-09: #1a202c;
+  --color-grays-macropay-10: #262626;
+
+  /* Gray Scale */
+  --color-gray-1: #fafafa;
+  --color-gray-2: #fafafa;
+  --color-gray-3: #f5f5f5;
+  --color-gray-4: #f0f0f0;
+  --color-gray-5: #d9d9d9;
+  --color-gray-6: #bfbfbf;
+  --color-gray-7: #8c8c8c;
+  --color-gray-8: #595959;
+  --color-gray-9: #434343;
+  --color-gray-10: #262626;
+  --color-gray-11: #1f1f1f;
+  --color-gray-12: #141414;
+
+  /* Neutral */
+  --color-neutral-1: #fafafa;
+  --color-neutral-3: #d9d9d9;
+  --color-neutral-6: #000000d9;
+
+  /* Purple */
+  --color-purple-1: #f9f0ff;
+  --color-purple-3: #d3adf7;
+  --color-purple-6: #722ed1;
+
+  /* Geekblue */
+  --color-geekblue-1: #f0f5ff;
+  --color-geekblue-3: #adc6ff;
+  --color-geekblue-6: #2f54eb;
+
+  /* Blue */
+  --color-blue-1: #e6f7ff;
+  --color-blue-3: #91d5ff;
+  --color-blue-6: #1890ff;
+
+  /* Cyan */
+  --color-cyan-1: #e6fffb;
+  --color-cyan-3: #87e8de;
+  --color-cyan-6: #13c2c2;
+
+  /* Lime */
+  --color-lime-1: #fcffe6;
+  --color-lime-3: #eaff8f;
+  --color-lime-6: #a0d911;
+
+  /* Gold */
+  --color-gold-1: #fffbe6;
+  --color-gold-3: #ffe58f;
+  --color-gold-6: #faad14;
+
+  /* Orange */
+  --color-orange-1: #fff7e6;
+  --color-orange-3: #ffd591;
+  --color-orange-6: #fa8c16;
+
+  /* Volcano */
+  --color-volcano-1: #fff2e8;
+  --color-volcano-3: #ffbb96;
+  --color-volcano-6: #fa541c;
+
+  /* Magenta */
+  --color-magenta-1: #fff0f6;
+  --color-magenta-3: #ffadd2;
+  --color-magenta-6: #eb2f96;
+
+  /* Error */
+  --color-error: #ef5858;
+  --color-error-light: #eab8b1;
+  --color-error-bg: #fff1f0;
+  --color-error-fill-out: #d85b4d;
+
+  /* Success */
+  --color-success: #43cc53;
+  --color-success-light: #9be4a3;
+  --color-success-bg: #f6ffed;
+  --color-success-fill-out: #67a836;
+
+  /* Warning */
+  --color-warning: #faad14;
+  --color-warning-light: #ffe58f;
+  --color-warning-bg: #fffbe6;
+  --color-warning-fill-out: #fa8c16;
+
+  /* Info */
+  --color-info: #1890ff;
+  --color-info-light: #91caff;
+  --color-info-bg: #e6f7ff;
+  --color-info-fill-out: #1890ff;
+
+  /* Tag */
+  --color-tag-1: #3a98b9;
+  --color-tag-2: #4d455d;
+
+  /* Red */
+  --color-red: #ff0003;
+  --color-red-1: #fff1f0;
+  --color-red-3: #ffa39e;
+  --color-red-6: #f5222d;
+
+  /* API Table */
+  --color-api-table: #c41d7f;
+
+  /* Green */
+  --color-green: #23ad5c;
+  --color-green-1: #f6ffed;
+  --color-green-3: #b7eb8f;
+  --color-green-6: #52c41a;
+
+  /* Box Shadows */
+  --box-shadow-full: 0 2px 16px 0 rgba(161, 173, 192, 0.15);
+  --box-shadow-accordion: 0px 3px 15px 0px rgba(161, 173, 192, 0.1);
+  --box-shadow-button: 0px 2px 0px 0px rgba(0, 0, 0, 0.04);
+  --box-shadow-cardstatus: 0px 0px 40px 0px rgba(0, 50, 130, 0.15);
+  --box-shadow-icon-box: 0px 0px 4px 0px rgba(0, 71, 186, 0.25);
+}
+
+/* Safelist patterns for dynamic classes */
+@utility grid-cols-* {
+  grid-template-columns: repeat(*, minmax(0, 1fr));
+}
+
+@utility grid-rows-* {
+  grid-template-rows: repeat(*, minmax(0, 1fr));
+}
+
+@utility gap-* {
+  gap: *;
+}
+
+@utility col-span-* {
+  grid-column: span* / span*;
+}
+
+@utility col-start-* {
+  grid-column-start: *;
+}
+
+@utility col-end-* {
+  grid-column-end: *;
+}

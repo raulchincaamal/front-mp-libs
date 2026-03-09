@@ -4,6 +4,7 @@
   "workspaces": [
     "packages/*"
   ],
+  "type": "module",
   "scripts": {
     "lint": "eslint .",
     "commit": "git add . && sui-mono commit",
@@ -31,8 +32,10 @@
     "prettier-plugin-tailwindcss": "0.6.11",
     "eslint-plugin-prettier": "5.2.3",
     "husky": "9.1.7",
-    "vite": "^7.2.4",
-    "vite-plugin-dts": "^4.5.4",
-    "vite-plugin-svgr": "4.5.0"
+    "vite": "7.2.4",
+    "vite-plugin-dts": "4.5.4",
+    "vite-plugin-svgr": "4.5.0",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "4.0.16"
   }
 }
