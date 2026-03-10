@@ -4,24 +4,24 @@ import type { Size } from "@/interfaces/common"
 
 export type SegmentedValue = string | number
 
-export interface SegmentedOption<T = SegmentedValue> {
+export interface SegmentedOption {
   label: ReactNode
-  value: T
+  value: SegmentedValue
   icon?: ReactNode
   disabled?: boolean
   tooltip?: string
 }
 
-export type SegmentedOptions<T = SegmentedValue> = (T | SegmentedOption<T>)[]
+export type SegmentedOptions = (SegmentedValue | SegmentedOption)[]
 
-export interface SegmentedProps<T = SegmentedValue> extends Omit<
+export interface SegmentedProps extends Omit<
   HTMLMotionProps<"div">,
   "onChange" | "defaultValue"
 > {
-  options: SegmentedOptions<T>
-  value?: T
-  defaultValue?: T
-  onChange?: (value: T) => void
+  options: SegmentedOptions
+  value?: SegmentedValue
+  defaultValue?: SegmentedValue
+  onChange?: (value: SegmentedValue) => void
   size?: Size
   disabled?: boolean
   vertical?: boolean
@@ -40,25 +40,12 @@ export interface SegmentedIndicatorProps {
   size: Size
 }
 
-export interface SegmentedOptionProps<T = unknown> {
-  option: {
-    value: T
-    label?: ReactNode
-    icon?: ReactNode
-    disabled?: boolean
-  }
+export interface SegmentedOptionProps {
+  option: SegmentedOption
   index: number
   isActive: boolean
   disabled: boolean
   vertical: boolean
   size: Size
-  onClick: (
-    option: {
-      value: T
-      label?: ReactNode
-      icon?: ReactNode
-      disabled?: boolean
-    },
-    index: number
-  ) => void
+  onClick: (option: SegmentedOption, index: number) => void
 }

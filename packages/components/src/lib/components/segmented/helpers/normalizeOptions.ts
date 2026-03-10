@@ -1,19 +1,15 @@
-import type {
-  SegmentedOptions,
-  SegmentedOption,
-  SegmentedValue,
-} from "../segmented.types"
+import type { SegmentedOptions, SegmentedOption } from "../segmented.types"
 
-export const normalizeOptions = <T = SegmentedValue>(
-  options: SegmentedOptions<T>
-): SegmentedOption<T>[] => {
+export const normalizeOptions = (
+  options: SegmentedOptions
+): SegmentedOption[] => {
   return options.map(option => {
     if (typeof option === "string" || typeof option === "number") {
       return {
         label: option,
-        value: option as T,
+        value: option,
       }
     }
-    return option as SegmentedOption<T>
+    return option
   })
 }

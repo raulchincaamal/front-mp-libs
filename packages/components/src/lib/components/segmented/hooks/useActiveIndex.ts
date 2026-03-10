@@ -1,7 +1,11 @@
 import { useState, useEffect, useMemo } from "react"
 import { normalizeOptions } from "../helpers/normalizeOptions"
+import type { SegmentedOptions, SegmentedValue } from "../segmented.types"
 
-export const useActiveIndex = <T = unknown>(options: T[], currentValue: T) => {
+export const useActiveIndex = (
+  options: SegmentedOptions,
+  currentValue: SegmentedValue
+) => {
   const [activeIndex, setActiveIndex] = useState<number>(0)
   const normalizedOptions = useMemo(() => normalizeOptions(options), [options])
 

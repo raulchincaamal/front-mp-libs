@@ -17,6 +17,7 @@ export const SegmentedIndicator = ({
 
   return (
     <motion.div
+      initial={false}
       className={classMerge(
         "absolute bg-white shadow-md",
         borderRadius,

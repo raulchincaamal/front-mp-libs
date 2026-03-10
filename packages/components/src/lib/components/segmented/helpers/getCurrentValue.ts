@@ -1,6 +1,8 @@
-export const getCurrentValue = <T>(
-  value?: T,
-  defaultValue?: T
-): T | undefined => {
-  return value ?? defaultValue
+import type { SegmentedValue } from "../segmented.types"
+
+export const getCurrentValue = (
+  defaultValue: SegmentedValue = "",
+  value?: SegmentedValue
+): SegmentedValue => {
+  return value || defaultValue
 }

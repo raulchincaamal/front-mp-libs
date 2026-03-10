@@ -1,6 +1,6 @@
 import { useRef, useId } from "react"
 import { motion } from "motion/react"
-import type { SegmentedProps, SegmentedValue } from "./segmented.types"
+import type { SegmentedProps } from "./segmented.types"
 import { getContainerStyles } from "./helpers/getContainerStyles"
 import { createItemClickHandler } from "./helpers/createItemClickHandler"
 import { getCurrentValue } from "./helpers/getCurrentValue"
@@ -10,7 +10,7 @@ import { SegmentedIndicator } from "./components/SegmentedIndicator"
 import { SegmentedOption } from "./components/SegmentedOption"
 import { containerAnimation } from "./constants/animation-config"
 
-const Segmented = <T extends SegmentedValue = SegmentedValue>({
+const Segmented = ({
   options,
   value,
   defaultValue,
@@ -20,13 +20,13 @@ const Segmented = <T extends SegmentedValue = SegmentedValue>({
   vertical = false,
   className,
   ...props
-}: SegmentedProps<T>) => {
+}: SegmentedProps) => {
   const idComponent = useId()
   const containerRef = useRef<HTMLDivElement>(null)
 
   const { activeIndex, setActiveIndex, normalizedOptions } = useActiveIndex(
     options,
-    getCurrentValue(value, defaultValue)
+    getCurrentValue(defaultValue, value)
   )
   const indicatorStyle = useIndicatorStyle(
     containerRef,
