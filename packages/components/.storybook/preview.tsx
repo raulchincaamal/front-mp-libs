@@ -1,11 +1,9 @@
-import React from "react"
 import type { Preview } from "@storybook/react"
 import { I18nextProvider } from "react-i18next"
 import i18n from "../src/lib/lang/i18n"
 import { viewports } from "./viewports"
 
 import "../src/styles/globals.css"
-import "@glidejs/glide/dist/css/glide.core.min.css"
 import "../src/styles/storybook-fonts.css"
 
 const preview: Preview = {
